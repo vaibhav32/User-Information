@@ -1,0 +1,32 @@
+<div class ="menu-bar">
+  <!-- <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div> -->
+  
+  <div class="menu-items">
+    <div>
+    </div>
+    <div class = "items" (click)="changeMenu('User-Info')">
+      User Information
+    </div>
+    <span>
+      |
+    </span>
+    <div class = "items" (click)="changeMenu('About-Us')">
+      About Us 
+    </div>
+    <span>
+      |
+    </span>
+    <div class = "items" (click)="changeMenu('Contact')">
+      Contact
+    </div>
+  </div>
+  <div>
+   {{this.currentDate  | date:'YY-MMMM-dd' }}
+  </div>
+</div>
+<app-user-info *ngIf ="currentActiveMenu === 'User-Info'"></app-user-info>
